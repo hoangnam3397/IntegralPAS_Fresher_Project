@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
-	<context:component-scan base-package="stackjava.com.springmvcjdbc" />
+	<context:component-scan base-package="com.dxc.fresher" />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -19,25 +19,38 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-
-	<bean
+<!-- 	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
 			<value>/resources/jdbc.properties</value>
 		</property>
-	</bean>
-
+		
+	</bean> 
+	
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="${jdbc.driverClassName}" />
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=IntegralPAS_Fresher;" />
+		<property name="username" value="sa" />
+		<property name="password" value="123" />
 	</bean>
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	-->
+
+
+	
+		<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+  <property name="url" value="jdbc:sqlserver://server:1433;DatabaseName=IntegralPAS_Fresher" />
+  <property name="username" value="sa" />
+  <property name="password" value="123" />
+		</bean>
+		<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"/>
+		</bean>
 	
 	<!-- Enable Annotation based Declarative Transaction Management -->
 	<tx:annotation-driven proxy-target-class="true"
