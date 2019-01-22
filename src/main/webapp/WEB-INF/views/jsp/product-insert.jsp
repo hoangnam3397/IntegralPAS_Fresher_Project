@@ -10,8 +10,18 @@
   <c:url value="/insertProduct" var="insertProduct"/>
   <form:form action="${insertProduct}" method="POST"
     modelAttribute="product">
-      Name: <form:input path="name" /> <br/> <br/>
-      Description: <form:input path="description" /> <br/> <br/>
+    <table>
+    	<tr>
+    		<td>Name: </td>
+    		<td> <form:input path="name" /></td>
+    	</tr>
+    	<tr>
+    		<td>Description: </td>
+    		<td><form:input path="description" /> <br/> <br/></td>
+    	</tr>
+    </table>
+     
+
     <button type="submit">Submit</button>
   </form:form>
 </body>

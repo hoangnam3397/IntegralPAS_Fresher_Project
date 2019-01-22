@@ -12,10 +12,21 @@
 	<h1>Edit Customer:</h1>
 	<c:url value="/updateProduct" var="updateProduct" />
 	<form:form action="${updateProduct}" method="POST" modelAttribute="product">
-	    Id: <form:input path="id" readonly="true" /> <br/> <br/>
-    	Name: <form:input path="name" /> <br/> <br/>
-    	Address: <form:input path="description" /> <br/> <br/>
-		<button type="submit">Submit</button>
+		 <table>
+		 <tr>
+    		<td>Id:  </td>
+    		<td><form:input path="id" readonly="true" /></td>
+    	</tr>
+    	<tr>
+    		<td>Name: </td>
+    		<td> <form:input path="name" /></td>
+    	</tr>
+    	<tr>
+    		<td>Description: </td>
+    		<td><form:input path="description" /> <br/> <br/></td>
+    	</tr>
+    </table>
+    		<button type="submit">Submit</button>
 	</form:form>
 
 </body>

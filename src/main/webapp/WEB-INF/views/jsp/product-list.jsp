@@ -40,10 +40,19 @@ td {
           <td>${product.description}</td>
           <td> <a href="${urlView}/${product.id}">View</a>
          		<a href="${urlUpdate}/${product.id}">Update</a>
-   				<a href="${urlDelete}/${product.id}">Delete</a></td>
+   				<a href="#" onclick="deleteProduct('${product.id}')">Delete</a></td>
         </tr>
       </c:forEach>
     </c:if>
 </table>
+<script type="text/javascript">
+	function deleteProduct(productId) {
+		if (confirm('Do you want to delete this project?')) {
+			window.location.href="${urlDelete}/"+productId;
+		} else {
+		    // Do nothing!
+		}
+	}
+</script>
 </body>
 </html>
