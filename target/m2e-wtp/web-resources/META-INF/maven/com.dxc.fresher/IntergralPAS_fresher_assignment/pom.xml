@@ -34,9 +34,10 @@
 		<!-- SQL Server jdbc4 -->
 		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/sqljdbc4 -->
 <dependency>
-    <groupId>commons-logging</groupId>
-    <artifactId>commons-logging</artifactId>
-    <version>1.2</version>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>sqljdbc4</artifactId>
+    <version>4.0</version>
+    <scope>test</scope>
 </dependency>
 		<!-- jsp-api -->
 		<dependency>
