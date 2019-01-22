@@ -17,6 +17,9 @@ td {
 </head>
 <body>
   <c:url value="/product-insert" var="urlInsert"/>
+  <c:url value="/product-view/" var="urlView"/>
+	<c:url value="/product-update/" var="urlUpdate"/>
+	<c:url value="/productDelete/" var="urlDelete"/>
 <h1>List Product:</h1>
 <a href="${urlInsert}">Add</a>
 <br/>
@@ -34,10 +37,10 @@ td {
         <tr style="border: 1px black solid">
           <td>${product.id}</td>
           <td>${product.name}</td>
-          <td>${product.depscription}</td>
-          <td> <a href="#">View</a>
-         		<a href="#">Update</a>
-   				<a href="#">Delete</a></td>
+          <td>${product.description}</td>
+          <td> <a href="${urlView}/${product.id}">View</a>
+         		<a href="${urlUpdate}/${product.id}">Update</a>
+   				<a href="${urlDelete}/${product.id}">Delete</a></td>
         </tr>
       </c:forEach>
     </c:if>

@@ -18,8 +18,8 @@ public class ProductDAO {
 	  private JdbcTemplate jdbcTemplate;
 	  
 	  public void insert(Product product) {
-		  String sql = "INSERT INTO Product (productname, depcription) VALUES (?, ?)";
-		   jdbcTemplate.update(sql, product.getName(), product.getDepscription());
+		  String sql = "INSERT INTO Product (productname, description) VALUES (?, ?)";
+		   jdbcTemplate.update(sql, product.getName(), product.getDescription());
 		  
 	  }
 	  public void delete(int id) {
@@ -27,8 +27,8 @@ public class ProductDAO {
 		    jdbcTemplate.update(sql);
 	  }
 	  public void update(Product product) {
-		    String sql = "UPDATE Product SET productname = ?, depcription = ? WHERE id = ? ";
-		    jdbcTemplate.update(sql, product.getName(), product.getDepscription(), product.getId());
+		    String sql = "UPDATE Product SET productname = ?, description = ? WHERE id = ? ";
+		    jdbcTemplate.update(sql, product.getName(), product.getDescription(), product.getId());
 	  }
 	  public Product findById(int id) {
 		    String sql = "SELECT * FROM Product WHERE id = ?";

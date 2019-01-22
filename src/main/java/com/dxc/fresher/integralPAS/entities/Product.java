@@ -3,7 +3,7 @@ package com.dxc.fresher.integralPAS.entities;
 public class Product {
 	private int id;
 	private String name;
-	private String depscription;
+	private String description;
 	
 	public Product() {
 		// TODO Auto-generated constructor stub
@@ -12,13 +12,13 @@ public class Product {
 	public Product(int id, String name, String depscription) {
 		this.setId(id);
 		this.setName(name);
-		this.setDepscription(depscription);
+		this.setDescription(description);
 	}
 
 	public Product(String name, String depscription) {
 		super();
 		this.setName(name);
-		this.setDepscription(depscription);
+		this.setDescription(depscription);
 	}
 
 	public int getId() {
@@ -37,12 +37,12 @@ public class Product {
 		this.name = name;
 	}
 
-	public String getDepscription() {
-		return depscription;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDepscription(String depscription) {
-		this.depscription = depscription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	
