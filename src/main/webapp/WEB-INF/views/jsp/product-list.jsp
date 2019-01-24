@@ -20,7 +20,7 @@ td {
   <c:url value="/product-view/" var="urlView"/>
 	<c:url value="/product-update/" var="urlUpdate"/>
 	<c:url value="/productDelete/" var="urlDelete"/>
-<h1>List Product:</h1>
+<h1>Product List</h1>
 <a href="${urlInsert}">Add</a>
 <br/>
 <br/>
@@ -47,7 +47,7 @@ td {
 </table>
 <script type="text/javascript">
 	function deleteProduct(productId) {
-		if (confirm('Do you want to delete this project?')) {
+		if (confirm('Do you want to delete this product?')) {
 			window.location.href="${urlDelete}/"+productId;
 		} else {
 		    // Do nothing!

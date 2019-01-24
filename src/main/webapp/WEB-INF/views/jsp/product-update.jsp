@@ -3,13 +3,13 @@
 
 <html>
 <head>
-<title>Helo Spring MVC + JDBC</title>
+<title>IntegralPAS Freshe</title>
 </head>
 <body>
-	<a href="<c:url value="/product-list" />">List Customer</a>
+	<a href="<c:url value="/product-list" />">List Product</a>
 	<br />
 
-	<h1>Edit Customer:</h1>
+	<h1>Edit Product:</h1>
 	<c:url value="/updateProduct" var="updateProduct" />
 	<form:form action="${updateProduct}" method="POST" modelAttribute="product">
 		 <table>

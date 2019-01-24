@@ -5,8 +5,8 @@
 <title>IntegralPAS Fresher</title>
 </head>
 <body>
-  <a href="<c:url value="/product-list" />" >List Customer</a><br />
-  <h1>Add new Product:</h1>
+  <a href="<c:url value="/product-list" />" >List Product</a><br />
+  <h1>Add New Product:</h1>
   <c:url value="/insertProduct" var="insertProduct"/>
   <form:form action="${insertProduct}" method="POST"
     modelAttribute="product">
